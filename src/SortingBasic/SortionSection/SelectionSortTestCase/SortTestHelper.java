@@ -3,7 +3,7 @@
  * All rights reserved.
  *
  */
-package SortingBasic.SortingBasic.SelectionSortTestCase;
+package SortingBasic.SortionSection.SelectionSortTestCase;
 
 /**
  * 在这里编写类的功能描述
