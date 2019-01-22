@@ -5,7 +5,10 @@
  */
 package SortingBasic.QuickSort;
 
-import SortingBasic.MergeSort.SortTestHelper;
+
+import SortingBasic.InsertionSort.InsertionSort;
+
+import static SortingBasic.QuickSort.InsertSort.insertSort;
 
 /**
  * 在这里编写类的功能描述
@@ -25,6 +28,12 @@ public class QuickSort {
 
         if (l>=r)
             return;
+
+        // 对于小规模数组, 使用插入排序
+        if( r - l <= 15 ){
+            insertSort(arr, l, r);
+            return;
+        }
 
         int p=partition(arr,l,r);
         sort(arr,l,p-1);
