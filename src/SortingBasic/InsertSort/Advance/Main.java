@@ -16,14 +16,17 @@ import java.util.Arrays;
 public class Main {
     public static void main(String[] args){
 
-        int N=10000;
+        int N=16;
 
         Integer[] arr1=SortTestHelper.generateRandomArray(N,1,1000000);
         Integer[] arr2=Arrays.copyOf(arr1,arr1.length);
         Integer[] arr3=Arrays.copyOf(arr1,arr1.length);
 
-        SortTestHelper.testSort("SortingBasic.InsertionSort.InsertionSort",arr1);
+       /* SortTestHelper.testSort("SortingBasic.InsertionSort.InsertionSort",arr1);
         SortTestHelper.testSort("SortingBasic.InsertSort.Advance.InsertSort",arr2);
-        SortTestHelper.testSort("SortingBasic.InsertSort.Advance.SelectionSort",arr3);
+        SortTestHelper.testSort("SortingBasic.InsertSort.Advance.SelectionSort",arr3);*/
+
+        SortTestHelper.testSort("SortingBasic.InsertSort.Advance.ShellSort",arr1);
+        SortTestHelper.printArray(arr1);
     }
 }
