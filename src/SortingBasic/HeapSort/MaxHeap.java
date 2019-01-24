@@ -22,6 +22,21 @@ public class MaxHeap<Item extends Comparable> {
         this.capacity=capacity;
     }
 
+    protected MaxHeap(Item[] arr){
+        int n=arr.length;
+
+        data= (Item[]) new Comparable[n+1];
+        capacity=n;
+        for (int i=0;i<n;i++){
+            data[i+1]=arr[i];
+        }
+        count=n;
+
+        for (int i=count/2;count>=1;i--){
+            shitDown(i);
+        }
+    }
+
     public int size(){
         return count;
     }
@@ -35,6 +50,26 @@ public class MaxHeap<Item extends Comparable> {
         data[count+1]=item;
         count++;
         shitUp(count);
+    }
+
+    public Item extractMax(){
+        assert count>0;
+        Item ret=data[1];
+        swap(1,count);
+        count--;
+        shitDown(1);
+    }
+    public void shitDown(int k){
+        while (2*k<=count){
+            int j=2*k;
+            if (j+1<=count&&data[j+1].compareTo(data[j])>0)
+                j++;
+
+            if (data[k].compareTo(data[j])>=0) break;
+
+            swap(k,j);
+            k=j;
+        }
     }
 
     private void shitUp(int k){
