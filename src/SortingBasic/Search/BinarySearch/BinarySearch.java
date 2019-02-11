@@ -25,9 +25,9 @@ public class BinarySearch {
 
             int mid=l+(l-r)/2;
 
-            if (arr[mid]==target){
+            if (arr[mid].compareTo(target)==0){
                 return mid;
-            }else if(arr[mid]<target){
+            }else if(arr[mid].compareTo(target)<0){
                  r=mid-1;
             }else {
                 l=mid+1;
