@@ -9,9 +9,11 @@ package SortingBasic.HeapSort;
  * 在这里编写类的功能描述
  *
  * @author wangkai
- * @created 2019/1/22
+ * @created 2019/2/12
  */
-public class PrintableMaxHeap extends MaxHeap<Comparable<Integer>> {
+// 我们的PrintableMaxHeap只能处理整数信息，所以继承的是MaxHeap<Comparable<Integer>>
+public class PrintableMaxHeap extends MaxHeap<Comparable<Integer>>{
+
     public PrintableMaxHeap(int capacity){
         super(capacity);
     }

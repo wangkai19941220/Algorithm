@@ -22,11 +22,11 @@ public class Main {
         Integer[] arr2=Arrays.copyOf(arr1,arr1.length);
         Integer[] arr3=Arrays.copyOf(arr1,arr1.length);
 
-       /* SortTestHelper.testSort("SortingBasic.InsertionSort.InsertionSort",arr1);
+       //SortTestHelper.testSort("SortingBasic.InsertionSort.InsertionSort",arr1);
         SortTestHelper.testSort("SortingBasic.InsertSort.Advance.InsertSort",arr2);
-        SortTestHelper.testSort("SortingBasic.InsertSort.Advance.SelectionSort",arr3);*/
+        //SortTestHelper.testSort("SortingBasic.InsertSort.Advance.SelectionSort",arr3);
 
-        SortTestHelper.testSort("SortingBasic.InsertSort.Advance.ShellSort",arr1);
+        //SortTestHelper.testSort("SortingBasic.InsertSort.Advance.ShellSort",arr1);
         SortTestHelper.printArray(arr1);
     }
 }
